@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset = "UTF-8">
+    <meta property="og:title" content="fileupload for marketing" />
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <title>File uploading tool</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+    <style>
+        body {text-align: center;
+            font-size:larger;
+            margin-top: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto}
+    </style>
+</head>
+
+
+<body>
+    <?php
+        inclue(".htpasswd");
+    ?>
+    <form method = "post" action = "fileupload.php" enctype = "multipart/form-data">
+        <p >Image: <input type = "file" name = "file"></p>
+        <p >URL: <input type = "text" name = "URL" size = "35"></p>
+        <p >Title: <input type = "text" name="title" size = "35" maxlength = "30"></p>
+        <p>Description<input type = "text" name="description"></p>
+        <input type = "submit" name = "submit">
+    </form>
+</body>
+
+</html>
